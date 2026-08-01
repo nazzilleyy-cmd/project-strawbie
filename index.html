@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Strawbie 🌷</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="bg"></div>
+
+    <div id="hearts"></div>
+
+    <!-- Password -->
+    <section class="screen active" id="password">
+        <div class="card">
+
+            <h1>🌷 A lil surprise for my favourite lil girl 😭</h1>
+
+            <p>If you know, you know... 😌</p>
+
+            <input
+                type="password"
+                id="pass"
+                placeholder="Enter 0610">
+
+            <button onclick="unlock()">
+                Unlock 😙
+            </button>
+
+            <p id="msg"></p>
+
+        </div>
+    </section>
+
+    <!-- Welcome -->
+    <section class="screen" id="welcome">
+        <div class="card">
+
+            <h1>Welcome Strawbie 😋</h1>
+
+            <p>I made something just for you 🤧</p>
+
+            <button onclick="startJourney()">
+                Open 😌
+            </button>
+
+            <button
+                class="musicBtn"
+                id="musicBtn"
+                onclick="toggleMusic()">
+                🎵
+            </button>
+
+        </div>
+    </section>
+
+    <!-- Loading -->
+    <section class="screen" id="loading">
+        <div class="card">
+
+            <h2 id="loadingText">
+                Almost there... 😌
+            </h2>
+
+        </div>
+    </section>
+
+    <!-- Questions -->
+    <section class="screen" id="questions">
+        <div class="card">
+
+            <h2 id="question"></h2>
+
+            <div class="buttons">
+
+                <button onclick="answerQuestion()">
+                    Yes
+                </button>
+
+                <button onclick="answerQuestion()">
+                    Absolutely yes
+                </button>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Love Letter -->
+    <section class="screen" id="letter">
+        <div class="card">
+
+            <h1>For You 😌</h1>
+
+            <p id="letterText">
+                Your message will appear here...
+            </p>
+
+            <button onclick="finish()">
+                One Last Click 😭
+            </button>
+
+        </div>
+    </section>
+
+    <!-- Ending -->
+    <section class="screen" id="end">
+        <div class="card">
+
+            <h1>🌷 Happy Girlfriend's Day 🌷</h1>
+
+            <p>
+                Every click brought you closer to this surprise...
+                just like every day with you makes me happier. ❤️
+            </p>
+
+            <h3>
+                Made with love by your annoying boy 😙
+            </h3>
+
+        </div>
+    </section>
+
+    <audio id="music" loop>
+        <source src="love.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

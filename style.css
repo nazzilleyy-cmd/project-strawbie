@@ -1,0 +1,183 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ffb6d5,#ffd6e8);
+    overflow:hidden;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+/* Background */
+
+.bg{
+    position:fixed;
+    inset:0;
+    background:linear-gradient(135deg,#ffb6d5,#ffcce0,#ffe6f0);
+    z-index:-2;
+}
+
+/* Floating Hearts */
+
+#hearts{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:-1;
+}
+
+.heart{
+    position:absolute;
+    bottom:-40px;
+    font-size:22px;
+    animation:float 6s linear forwards;
+}
+
+@keyframes float{
+
+    from{
+        transform:translateY(0);
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+
+}
+
+/* Screens */
+
+.screen{
+    display:none;
+    width:100%;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.screen.active{
+    display:flex;
+    animation:fade .7s ease;
+}
+
+@keyframes fade{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* Card */
+
+.card{
+    width:100%;
+    max-width:420px;
+    background:rgba(255,255,255,.88);
+    backdrop-filter:blur(10px);
+    border-radius:28px;
+    padding:35px 25px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+/* Text */
+
+h1{
+    color:#ff4f87;
+    margin-bottom:15px;
+    font-size:2rem;
+}
+
+h2{
+    color:#ff4f87;
+    margin-bottom:18px;
+}
+
+h3{
+    margin-top:20px;
+    color:#ff6c9d;
+}
+
+p{
+    color:#555;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+/* Input */
+
+input{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:15px;
+    outline:none;
+    font-size:16px;
+    margin-bottom:18px;
+    background:#fff;
+}
+
+/* Buttons */
+
+button{
+    width:100%;
+    padding:14px;
+    margin-top:12px;
+    border:none;
+    border-radius:40px;
+    background:#ff4f87;
+    color:#fff;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.04);
+}
+
+.musicBtn{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    font-size:20px;
+}
+
+/* Question Buttons */
+
+.buttons{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+/* Message */
+
+#msg{
+    color:red;
+    margin-top:15px;
+    min-height:20px;
+}
+
+/* Letter */
+
+#letterText{
+    white-space:pre-line;
+    line-height:1.9;
+}
